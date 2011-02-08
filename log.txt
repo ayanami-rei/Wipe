@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>/b/ - Бред</title>
+<link rel="shortcut icon" href="http://firstchan.ru//favicon.ico" />
+
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<script type="text/javascript" src="http://firstchan.ru//lib/javascript/gettext.js"></script>
+<script type="text/javascript" src="http://firstchan.ru/lib/javascript/protoaculous-compressed.js"></script>
+<link rel="stylesheet" type="text/css" href="http://firstchan.ru/css/img_global.css" />
+<link rel="stylesheet" type="text/css" href="http://firstchan.ru/css/photon.css" title="Photon" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://firstchan.ru/b/rss.xml" />
+
+<div id="board">
+<script type="text/javascript"><!--
+var ku_boardspath = 'http://firstchan.ru';
+var ku_cgipath = 'http://firstchan.ru';
+var style_cookie = "kustyle";
+var ispage = false;
+
+//--></script>
+<script type="text/javascript" src="http://firstchan.ru/lib/javascript/kusaba.js"></script>
+<script type="text/javascript"><!--
+var hiddenthreads = getCookie('hiddenthreads').split('!');
+//--></script>
+</head>
+<body>
+<div class="adminbar">
+
+[<a href="#" onclick="javascript:showwatchedthreads();return false" title="Избранные треды">WT</a>]&nbsp;
+[<a href="http://firstchan.ru" target="_top">Главная</a>]&nbsp;[<a href="http://firstchan.ru/manage.php" target="_top">У</a>]
+</div>
+<div class="navbar">
+
+
+</div>
+<script type="text/javascript"><!--
+if (getCookie('showwatchedthreads') == '1') {
+document.write('<div id="watchedthreads" style="top: 235px; left: 25px;" class="watchedthreads"><div class="postblock" id="watchedthreadsdraghandle" style="width: 100%;">Избранные треды<\/div><span id="watchedthreadlist"><\/span><div id="watchedthreadsbuttons"><a href="#" onclick="javascript:hidewatchedthreads();return false;" title="Скрыть блок с просмотренными темами"><img src="http://firstchan.ru/css/icons/blank.gif" border="0" class="hidewatchedthreads" alt="hide" /><\/a>&nbsp;<a href="#" onclick="javascript:getwatchedthreads(\'0\', \'b\');return false;" title="Обновить просмотенные темы"><img src="http://firstchan.ru/css/icons/blank.gif" border="0" class="refreshwatchedthreads" alt="refresh" /><\/a><\/div><\/div>');
+watchedthreadselement = document.getElementById('watchedthreads');
+watchedthreadselement.style.top = getCookie('watchedthreadstop');
+watchedthreadselement.style.left = getCookie('watchedthreadsleft');
+watchedthreadselement.style.width = Math.max(250,getCookie('watchedthreadswidth')) + 'px';
+watchedthreadselement.style.height = Math.max(75,getCookie('watchedthreadsheight')) + 'px';
+getwatchedthreads('254', 'b');
+}
+//--></script>
+
+
+<div class="logo">
+
+/b/ - 
+
+Бред</div>
+
+<hr />﻿&#91;<a href="http://firstchan.ru/b/">Вернуться</a>&#93;
+
+<div class="replymode">Ответ в тему
+
+
+</div>﻿
+<div class="postarea">
+<a id="postbox"></a>
+<form name="postform" id="postform" action="http://firstchan.ru/board.php" method="post" enctype="multipart/form-data"
+
+>
+<input type="hidden" name="board" value="b" />
+<input type="hidden" name="replythread" value="254" />
+<input type="hidden" name="MAX_FILE_SIZE" value="2048000" />
+
+<input type="text" name="email" size="28" maxlength="75" value="" style="display: none;" />
+<table class="postform">
+<tbody>
+<tr>
+<td class="postblock">
+Имя</td>
+<td>
+<input type="text" name="name" size="28" maxlength="75" accesskey="n" />
+</td>
+</tr>
+
+<tr>
+<td class="postblock">
+Email</td>
+<td>
+<input type="text" name="em" size="28" maxlength="75" accesskey="e" />
+</td>
+</tr>
+
+<tr>
+<td class="postblock">
+Тема</td>
+<td>
+<input type="text" name="subject" size="35" maxlength="75" accesskey="s" />&nbsp;<input type="submit" value="Ответ" accesskey="z" />&nbsp;(<span id="posttypeindicator">ответ на 254</span>)
+</td>
+</tr>
+<tr>
+<td class="postblock">
+Сообщение
+</td>
+<td>
+<textarea name="message" cols="48" rows="4" accesskey="m"></textarea>
+</td>
+</tr>
+<tr>
+<td class="postblock">
+Файл
+</td>
+<td>
+<input type="file" name="imagefile" size="35" accesskey="f" />
+
+</td>
+</tr>
+
+<tr>
+<td class="postblock">
+Видео
+</td>
+<td>
+<input type="text" name="embed" size="28" maxlength="75" accesskey="e" />&nbsp;<select name="embedtype">
+<option value="youtube">Youtube</option>
+
+<option value="google">Google</option>
+
+<option value="smotri.com">Smotri.com</option>
+
+<option value="prostopleer">Prostopleer</option>
+
+<option value="smotri.com with chat">Smotri.com with Chat</option>
+
+
+</select>
+<a class="rules" href="#postbox" onclick="window.open('http://firstchan.ru/embedhelp.php','embedhelp','toolbar=0,location=0,status=0,menubar=0,scrollbars=0,resizable=0,width=300,height=210');return false;">Help</a>
+</td>
+</tr>
+
+<tr>
+<td class="postblock">
+Пароль
+</td>
+<td>
+<input type="password" name="postpassword" size="8" accesskey="p" />&nbsp;(для удаления постов и файлов)
+</td>
+</tr>
+<tr id="passwordbox"><td></td><td></td></tr>
+<tr>
+<td colspan="2" class="rules">
+<ul style="margin-top: 0; margin-bottom: 0; text-align:left; font-size: 10px; font-family: Tahoma, Geneva, sans-serif;">
+<li>Поддерживаемые типы файлов:
+GIF, 
+JPG, 
+PNG
+
+
+</li>
+<li>Максимальный размер файла 2000 KB.</li>
+<li>Изображения больше 250x250px будут уменьшены.</li>
+<li>Сейчас 80 уникальных сообщений.
+ 
+<a href="http://firstchan.ru/b/catalog.html">Посмотреть каталог</a>
+
+</li>
+</ul>
+
+
+</td>
+</tr>
+</tbody>
+
+</table>
+</form>
+<hr />
+
+</div>
+<script type="text/javascript"><!--
+set_inputs("postform");
+//--></script><form id="delform" action="http://firstchan.ru/board.php" method="post">
+<input type="hidden" name="board" value="b" />
+
+
+<div id="thread254b">
+<a name="s"></a>
+
+<span class="filesize">
+Файл
+
+<a target="_blank" href="http://firstchan.ru/b/src/129709850635.jpg">
+
+129709850635.jpg</a>
+
+- (179.64KB
+
+, 
+1280x1024
+)
+
+</span>
+
+<br />
+
+<a onclick="javascript:expandimg('254', 'http://firstchan.ru/b/src/129709850635.jpg','http://firstchan.ru/b/thumb/129709850635s.jpg', '1280', '1024', '250', '200');return false;" target="_blank" 
+
+href="http://firstchan.ru/b/src/129709850635.jpg">
+<span id="thumb254"><img src="http://firstchan.ru/b/thumb/129709850635s.jpg" alt="254" class="thumb" height="200" width="250" /></span>
+</a>
+
+
+<a name="254"></a>
+<label>
+<input type="checkbox" name="post[]" value="254" />
+
+<span class="postername">Ayanami Rei</span>
+
+07/02/2011(Mon)20:08
+</label>
+<span class="reflink">
+<a href="http://firstchan.ru/b/res/254.html#254" onclick="return highlight('254');">No.&nbsp;</a><a href="http://firstchan.ru/b/res/254.html#i254" onclick="return insert('>>254\n');">254</a>
+
+</span>
+
+<span id="dnb-b-254-y"></span>
+<br />
+
+
+<blockquote>
+
+Just testing<br />
+
+</blockquote>
+
+
+
+
+
+
+
+</div>
+<br clear="left" />
+<hr />
+
+﻿<table class="userdelete">
+<tbody>
+<tr>
+<td>
+Удалить сообщение
+[<input type="checkbox" name="fileonly" id="fileonly" value="on" /><label for="fileonly">Только файл</label>]<br />Пароль
+<input type="password" name="postpassword" size="8" />&nbsp;<input name="deletepost" value="Удалить" type="submit" />
+
+</td>
+</tr>
+<tr>
+<td>
+Report post<br />
+Причина
+<input type="text" name="reportreason" size="10" />&nbsp;<input name="reportpost" value="Отчет" type="submit" />
+
+
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+
+<script type="text/javascript"><!--
+set_delpass("delform");
+//--></script>
+
+
+<br />
+
+<br />
+<div class="footer" style="clear: both;">
+ + Took 0.19s -
+
+</div>
+</div><a name="bottom"></a>
+</body>
+</html>
