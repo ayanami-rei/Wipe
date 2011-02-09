@@ -2,7 +2,7 @@ require "mechanize"
 
 class Wipe
 
-  attr_accessor :link, :fields, :file_field, :form_name, :reload, :files, :threads_count
+  attr_accessor :link, :fields, :file_field, :form_name, :reload, :files, :threads_count, :image, :ua
 
   def initialize &block
     @fields, @threads_count, @timeout = {}, 1, 0
@@ -11,6 +11,7 @@ class Wipe
 
   def run
     agent = Mechanize.new
+    agent.user_agent_alias = @ua || 'Mac Safari'
 
     threads = []
     @threads_count.times do |i|
@@ -24,13 +25,13 @@ class Wipe
             return
           end
           @fields.each { |name, value| form[name] = value }
-          form.file_uploads.first.file_name = @files[rand(@files.size)] if @file_field
-          begin
+          form.file_uploads.first.file_name = @image.get if @file_field
+          #begin
             page = agent.submit(form)
-          rescue
-            puts "ERROR submit form from thread #{i}"
-            next
-          end
+          #rescue
+            #puts "ERROR submit form from thread #{i}"
+            #next
+          #end
           puts "nexttt"
           File.open("log.txt", "w") {|file| file.puts page.body}
           sleep @timeout
@@ -38,6 +39,10 @@ class Wipe
       end
     end
     threads.each(&:join)
+  end
+
+  def user_agent name
+    @ua = name
   end
 
   def threads count
@@ -60,8 +65,8 @@ class Wipe
     @fields[name] = value
   end
 
-  def attach name, folder
-    @files = Dir.glob(folder + "/*.{jpg,jpeg,png,gif}", 0)
+  def attach name, options
+    @image = Image.new options
     @file_field = name.to_s
   end
 

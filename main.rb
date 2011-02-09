@@ -1,16 +1,17 @@
-$LOAD_PATH << "lib"
+#!/usr/bin/env ruby
+#encoding: utf-8
 
 require "rubygems"
-require "wipe"
-require "proxy"
-require "image"
+require "fileutils"
 
-wipe = Wipe.new do
-  page         "http://100ch.ru/tst/"
+Dir.glob(File.dirname(__FILE__) + '/lib/*.rb', &method(:require))
+
+Wipe.new do
+  page         "http://100ch.ru/tst/res/131.html"
   form         "postform"
-  text_name    "Ayanami Rei"
-  text_message "Just testing"
-  attach       :imagefile, "img"
+  text_name    "ололо"
+  text_message "qqqqqqqqqqqq"
+  attach       :imagefile, {:folder => "img", :mutex => true}
   threads      1
   wait         30
 end.run
