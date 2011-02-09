@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 require "mechanize"
 
 class Wipe
@@ -22,16 +24,16 @@ class Wipe
             form = page.form(@form_name)
           rescue
             puts "ERROR fetch page"
-            return
+            next
           end
           @fields.each { |name, value| form[name] = value }
           form.file_uploads.first.file_name = @image.get if @file_field
-          #begin
+          begin
             page = agent.submit(form)
-          #rescue
-            #puts "ERROR submit form from thread #{i}"
-            #next
-          #end
+          rescue
+            puts "ERROR submit form from thread #{i}"
+            next
+          end
           puts "nexttt"
           File.open("log.txt", "w") {|file| file.puts page.body}
           sleep @timeout
